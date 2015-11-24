@@ -59,9 +59,9 @@ def main(argv):
 		'network.proxy.socks_port': socksPort
 		}
 
-		with Browser('firefox',profile_preferences=proxy_settings) as browser:
+		browser = Browser('firefox',profile_preferences=proxy_settings)
 	else:
-		with Browser() as browser:
+		browser = Browser()
 	# with Browser() as browser:
 		browser.visit('https://m.facebook.com/')
 		browser.fill("email",email);
